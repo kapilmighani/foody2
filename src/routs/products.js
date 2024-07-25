@@ -5,18 +5,13 @@ const router = express.Router();
 // const user_auth = require("../../../middleware/patient_auth");
 
 const {
-    registor
+    products
 } = require("../controllers/user_validation");
 
-router.post("/registor", registor);
-
-
-
-//login
-const {
-    login
-}= require("../controllers/user_validation");
-router.post("/login", login);
+router.get("/products", products);
 
 module.exports = router;
+
+
+
 

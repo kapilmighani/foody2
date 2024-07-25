@@ -35,6 +35,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "/public")));
 
 app.use("/",require("./src/routs/user_validation.js"))
+app.use("/",require("./src/routs/products.js"))
 
 app.use("/public", express.static("public"));
 
