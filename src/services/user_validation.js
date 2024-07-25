@@ -64,7 +64,7 @@ exports.login = async (req,res)=>{
 
          if(exectinguser){
             return{
-                message: "user allredy exits",
+                message:"sucessfully login",
                 success: false
             }
 
