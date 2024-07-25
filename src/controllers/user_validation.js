@@ -40,6 +40,7 @@ exports.registor = async (req, res) => {
   exports.login = async (req, res) => {
     try {
       const data = await login(req, res);
+      
       if (data.success) {
         res.status(200).json(data);
       }

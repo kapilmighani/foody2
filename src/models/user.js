@@ -21,6 +21,7 @@ location:{
 
   },
 
+  
   user_authkey:{
     type : String
 
@@ -32,5 +33,7 @@ location:{
 const user =mongoose.model("user",userschema)
 
 module.exports = user;
+
+
 
 
