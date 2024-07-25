@@ -80,7 +80,7 @@ exports.login = async (req,res)=>{
 
           if(!user){
             return{
-                message: "user not created",
+                message: "user not exits",
                 success: false
             }
 
