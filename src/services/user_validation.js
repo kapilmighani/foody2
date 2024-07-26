@@ -64,7 +64,7 @@ exports.login = async (req,res)=>{
 
          if(exectinguser){
             return{
-                message:"sucessfully login",
+                message:"user already ",
                 success: false
             }
 
