@@ -5,10 +5,13 @@ const router = express.Router();
 // const user_auth = require("../../../middleware/patient_auth");
 
 const {
-    products
+    products ,
+    addProduct
 } = require("../controllers/user_validation");
 
 router.get("/products", products);
+
+router.post("/add", addProduct)
 
 module.exports = router;
 

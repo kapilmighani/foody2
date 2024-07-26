@@ -1,7 +1,7 @@
 // const { all } = require("axios");
 const {registor} = require("../services/user_validation")
 const {login} = require("../services/user_validation")
-const {products} = require("../services/products")
+const {products,addProduct} = require("../services/products")
 
 //registor
 exports.registor = async (req, res) => {
@@ -52,4 +52,18 @@ exports.registor = async (req, res) => {
     }
   };
 
-
+exports.addProduct = async(req,res)=>
+{
+  try {
+    const data = await addProduct(req, res);
+    
+    if (data.success) {
+      res.status(200).json(data);
+    }
+    else{
+        res.status(403).json(data);
+    }
+  } catch (error) {
+    console.log("Error:", error);
+  }
+}
